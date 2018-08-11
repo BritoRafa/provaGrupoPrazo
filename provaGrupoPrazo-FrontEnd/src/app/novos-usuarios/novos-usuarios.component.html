@@ -1,3 +1,74 @@
 <div class="container">
-  <h3>Tela de novos Usuários</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Permissão</th>
+        <th scope="col">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios;">
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.permissao}}</td>
+        <td>
+          <button type="button" class="btn btn-primary btn-small">
+            <i class="fas fa-edit"></i>
+          </button>
+        </td>
+      </tr>
+      <button type="button" class="btn btn-primary btn-small" (click)="abrirModal(template)">
+        <i class="fas fa-plus-square"></i>
+        <span> Adicionar novo usuário</span>
+      </button>
+    </tbody>
+  </table>
 </div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Adicionar novos usuários</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="name-input">Nome:</label>
+          <input name="name-input" type="text" class="form-control" [(ngModel)]="novoUsuario.nome">
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label for="name-input">E-mail:</label>
+          <input name="name-input" type="text" class="form-control" [(ngModel)]="novoUsuario.email">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="name-input">Senha:</label>
+          <input name="name-input" type="password" [(ngModel)]="novoUsuario.senha" class="form-control">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="name-input">Permissão:</label>
+          <select class="form-control" [(ngModel)]="novoUsuario.permissao">
+            <option value="administrador">Administrador</option>
+            <option value="usuario-basico">Usuário básico</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <button class="btn btn-primary" (click)="adicionarUsuario()">Adcionar</button>
+    </div>
+  </div>
+</ng-template>
