@@ -7,12 +7,18 @@ import { AppComponent } from './app.component';
 import { TarefasComponent } from './tarefas/tarefas.component';
 import { NovosUsuariosComponent } from './novos-usuarios/novos-usuarios.component';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+import { NovosUsuariosModalComponent } from './novos-usuarios-modal/novos-usuarios-modal.component';
+import { NovasTarefasModalComponent } from './novas-tarefas-modal/novas-tarefas-modal.component';
+import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarefasComponent,
-    NovosUsuariosComponent
+    NovosUsuariosComponent,
+    NovosUsuariosModalComponent,
+    NovasTarefasModalComponent,
+    ConfirmationModalComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +27,11 @@ import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
     ModalModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    NovosUsuariosModalComponent,
+    NovasTarefasModalComponent,
+    ConfirmationModalComponent
+  ]
 })
 export class AppModule { }
