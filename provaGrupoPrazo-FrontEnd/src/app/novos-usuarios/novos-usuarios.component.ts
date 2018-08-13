@@ -1,8 +1,8 @@
-import { ModalComponent } from './../modal/modal.component';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { Usuario } from './../model/usuario';
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { NovosUsuariosModalComponent } from '../novos-usuarios-modal/novos-usuarios-modal.component';
 
 @Component({
   selector: 'app-novos-usuarios',
@@ -12,13 +12,13 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 export class NovosUsuariosComponent implements OnInit {
 
   usuarios: Usuario[];
-  novoUsuario = new Usuario();
   modalRef: BsModalRef;
   constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
     this.usuarios = [
       {
+        id: 1,
         nome: 'admin',
         email: 'admin',
         permissao: 'administrador',
@@ -26,12 +26,15 @@ export class NovosUsuariosComponent implements OnInit {
       }
     ]
   }
-  abrirModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
+  abrirModal() {
+    this.modalRef = this.modalService.show(NovosUsuariosModalComponent);
   }
-  adicionarUsuario() {
-    this.usuarios.push(this.novoUsuario);
-    this.modalRef.hide();
+  editarUsuario(usuario: Usuario) {
+    this.modalRef = this.modalService.show(NovosUsuariosModalComponent, {
+      initialState: {
+        novoUsuario: usuario
+      }
+    });
   }
 
 }
