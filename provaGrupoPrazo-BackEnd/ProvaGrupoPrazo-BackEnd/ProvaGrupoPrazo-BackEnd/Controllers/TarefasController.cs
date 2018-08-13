@@ -19,8 +19,8 @@ namespace ProvaGrupoPrazo_BackEnd.Controllers
         }
 
         // POST api/values/5
-        [HttpPost("{tarefa}")]
-        public IActionResult AdicionarTarefa(Tarefa tarefa)
+        [HttpPost]
+        public IActionResult AdicionarTarefa([FromBody]Tarefa tarefa)
         {
             try
             {
@@ -34,8 +34,8 @@ namespace ProvaGrupoPrazo_BackEnd.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut("{tarefa}")]
-        public IActionResult EditarTarefa(Tarefa tarefa)
+        [HttpPut]
+        public IActionResult EditarTarefa([FromBody]Tarefa tarefa)
         {
             return Ok();
         }

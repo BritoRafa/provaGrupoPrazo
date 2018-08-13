@@ -1,3 +1,4 @@
+import { TarefasService } from './../services/tarefas.service';
 import { Tarefa } from './../model/tarefa';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,11 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovasTarefasModalComponent implements OnInit {
   novaTarefa = new Tarefa();
-  constructor(public modalRef: BsModalRef) { }
+  constructor(public modalRef: BsModalRef,
+              private tarefasService: TarefasService) { }
 
   ngOnInit() {
   }
   adicionarTarefa() {
-
+    this.tarefasService.adicionarTarefa(this.novaTarefa).subscribe();
   }
 }

@@ -38,10 +38,11 @@ namespace ProvaGrupoPrazo_BackEnd.Repository
                 var queryString = @"INSERT INTO Tarefas (Id, Titulo) VALUES (@Id, @Titulo)";
                 using (var connection = conn.ConnectionString)
                 {
+                    connection.Open();
                     return connection.Execute(queryString, tarefa);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return 0;
             }

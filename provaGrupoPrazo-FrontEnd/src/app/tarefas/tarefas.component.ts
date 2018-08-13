@@ -1,3 +1,4 @@
+import { TarefasService } from './../services/tarefas.service';
 import { NovasTarefasModalComponent } from './../novas-tarefas-modal/novas-tarefas-modal.component';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { Tarefa } from './../model/tarefa';
@@ -13,15 +14,16 @@ import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-m
 export class TarefasComponent implements OnInit {
   tarefas: Tarefa[];
   modalRef: BsModalRef;
-  constructor(private modalService: BsModalService) { }
+  constructor(private modalService: BsModalService,
+              private tarefasService: TarefasService) { }
 
   ngOnInit() {
-    this.tarefas = [
-      {
-        id: 1,
-        titulo: 'Primeira tarefa'
-      }
-    ]
+    this.carregarTarefas();
+  }
+  carregarTarefas() {
+    this.tarefasService.carregarTarefas().subscribe(result => {
+      this.tarefas = result as Tarefa[];
+    });
   }
   abrirModal() {
     this.modalRef = this.modalService.show(NovasTarefasModalComponent);

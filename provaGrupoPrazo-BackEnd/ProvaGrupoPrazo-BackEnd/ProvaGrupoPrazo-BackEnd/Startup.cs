@@ -40,12 +40,6 @@ namespace ProvaGrupoPrazo_BackEnd
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors("MyPolicy");
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "Foco Saude");
-            });
             app.UseMvc();
         }
     }

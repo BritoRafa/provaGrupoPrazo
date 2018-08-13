@@ -11,7 +11,7 @@ namespace ProvaGrupoPrazo_BackEnd
     public SqlConnection ConnectionString {
             get
             {
-                return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=GerenciadorTarefas;Integrated Security=True;");
+                return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Integrated Security=SSPI; Initial Catalog=GerenciadorTarefas; Integrated Security=true;");
             }
         }
 
