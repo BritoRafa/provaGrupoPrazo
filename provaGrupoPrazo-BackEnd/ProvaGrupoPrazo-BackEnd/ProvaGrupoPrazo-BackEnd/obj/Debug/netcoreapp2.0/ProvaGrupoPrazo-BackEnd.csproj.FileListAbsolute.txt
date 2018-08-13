@@ -1,0 +1,8 @@
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.deps.json
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.runtimeconfig.json
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.runtimeconfig.dev.json
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.dll
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.csprojAssemblyReference.cache
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.csproj.CoreCompileInputs.cache
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.AssemblyInfoInputs.cache
+E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.AssemblyInfo.cs
