@@ -1,3 +1,29 @@
 <div class="container">
-  <h3>Tela de Tarefas</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tarefa of tarefas;">
+        <td>{{tarefa.titulo}}</td>
+        <td>
+          <div class="btn-group btn-group-sm" role="group">
+            <button type="button" class="btn btn-primary btn-small" (click)="editarTarefa(tarefa)">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-small" (click)="excluirTarefa(tarefa)">
+              <i class="fas fa-edit"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <button type="button" class="btn btn-primary btn-small" (click)="abrirModal()">
+        <i class="fas fa-plus-square"></i>
+        <span> Adicionar nova tarefa</span>
+      </button>
+    </tbody>
+  </table>
 </div>
