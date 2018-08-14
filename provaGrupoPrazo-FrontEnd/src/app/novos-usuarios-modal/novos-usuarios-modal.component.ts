@@ -1,7 +1,7 @@
-import { UsuarioService } from './../services/usuario.service';
+import { UsuarioService } from '../services/usuario.service';
 import { Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
-import { Usuario } from './../model/usuario';
+import { Usuario } from '../model/usuario';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms'
 

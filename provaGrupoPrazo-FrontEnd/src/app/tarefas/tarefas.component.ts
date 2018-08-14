@@ -1,7 +1,7 @@
-import { TarefasService } from './../services/tarefas.service';
-import { NovasTarefasModalComponent } from './../novas-tarefas-modal/novas-tarefas-modal.component';
+import { TarefasService } from '../services/tarefas.service';
+import { NovasTarefasModalComponent } from '../novas-tarefas-modal/novas-tarefas-modal.component';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
-import { Tarefa } from './../model/tarefa';
+import { Tarefa } from '../model/tarefa';
 import { Component, OnInit } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';

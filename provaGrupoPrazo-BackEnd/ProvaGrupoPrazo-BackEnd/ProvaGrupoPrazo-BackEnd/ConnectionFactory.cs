@@ -11,7 +11,7 @@ namespace ProvaGrupoPrazo_BackEnd
     public SqlConnection ConnectionString {
             get
             {
-                return new SqlConnection(@"Data Source=RAFAEL-DESKTOP\SQLEXPRESS;Initial Catalog=GerenciadorTarefas;Integrated Security=True");
+                return new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=GerenciadorTarefas;Integrated Security=True");
             }
         }
 

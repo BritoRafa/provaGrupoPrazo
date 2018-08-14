@@ -13,6 +13,9 @@ import { NovasTarefasModalComponent } from './novas-tarefas-modal/novas-tarefas-
 import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
 import { TarefasService } from './services/tarefas.service';
 import { UsuarioService } from './services/usuario.service';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth-guard';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { UsuarioService } from './services/usuario.service';
     NovosUsuariosComponent,
     NovosUsuariosModalComponent,
     NovasTarefasModalComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import { UsuarioService } from './services/usuario.service';
   ],
   providers: [
     TarefasService,
-    UsuarioService
+    UsuarioService,
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent],
   entryComponents: [

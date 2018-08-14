@@ -1,6 +1,6 @@
 import { Subject } from 'rxjs';
-import { TarefasService } from './../services/tarefas.service';
-import { Tarefa } from './../model/tarefa';
+import { TarefasService } from '../services/tarefas.service';
+import { Tarefa } from '../model/tarefa';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { Component, OnInit } from '@angular/core';
 

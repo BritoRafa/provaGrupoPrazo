@@ -1,7 +1,7 @@
-import { ConfirmationModalComponent } from './../confirmation-modal/confirmation-modal.component';
+import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
-import { Usuario } from './../model/usuario';
+import { Usuario } from '../model/usuario';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { NovosUsuariosModalComponent } from '../novos-usuarios-modal/novos-usuarios-modal.component';
 import { UsuarioService } from '../services/usuario.service';

@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <div class="card">
+  <router-outlet *ngIf="!mostrarMenu"></router-outlet>
+  <div class="card" *ngIf="mostrarMenu">
     <div class="card-header">
       <div class="row">
         <div class="form-group p-1">
