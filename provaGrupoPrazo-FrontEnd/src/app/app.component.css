@@ -1,0 +1,9 @@
+.logout-button {
+  color: blue !important;
+  text-decoration: underline !important;
+  cursor: pointer;
+  font-size: 11px;
+}
+.user-permition {
+  font-size: 11px !important;
+}
