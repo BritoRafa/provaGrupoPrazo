@@ -5,12 +5,12 @@
   </button>
 </div>
 <div class="modal-body">
-  <form #f="ngModel">
+  <form #f="ngForm">
     <div class="row">
       <div class="col-6">
         <div class="form-group">
-          <label for="name-input">Nome:</label>
-          <input name="name-input" type="text" class="form-control" [(ngModel)]="novoUsuario.nome" required #name="ngModel">
+          <label for="name">Nome:</label>
+          <input name="name" type="text" class="form-control" [(ngModel)]="novoUsuario.nome" required #name="ngModel">
           <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
             Digite um nome
           </div>
@@ -18,8 +18,8 @@
       </div>
       <div class="col-6">
         <div class="form-group">
-          <label for="email-input">E-mail:</label>
-          <input name="email-input" type="email" class="form-control" [(ngModel)]="novoUsuario.email" required #email='ngModel'>
+          <label for="email">E-mail:</label>
+          <input name="email" type="email" class="form-control" [(ngModel)]="novoUsuario.email" required #email='ngModel'>
           <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
             E-mail inválido
           </div>
@@ -29,14 +29,13 @@
     <div class="row">
       <div class="col-6">
         <div class="form-group">
-          <label for="password-input">Senha:</label>
-          <input name="password-input" type="password" [(ngModel)]="novoUsuario.senha" class="form-control" required minlength="6"
-            #password="ngModel">
-          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
-            <div *ngIf="password.errors.required">
+          <label for="senha">Senha:</label>
+          <input id="senha" name="senha" type="password" [(ngModel)]="novoUsuario.senha" class="form-control" required minlength="6" #senha="ngModel" />
+          <div *ngIf="senha.invalid && (senha.dirty || senha.touched)" class="alert alert-danger">
+            <div *ngIf="senha.errors.required">
               Digite uma senha.
             </div>
-            <div *ngIf="password.errors.minlength">
+            <div *ngIf="senha.errors.minlength">
               Senhas tem que ter no minimo 6 caracteres
             </div>
           </div>
@@ -44,17 +43,20 @@
       </div>
       <div class="col-6">
         <div class="form-group">
-          <label for="name-input">Permissão:</label>
-          <select class="form-control" [(ngModel)]="novoUsuario.permissao">
+          <label>Permissão:</label>
+          <select class="form-control" [(ngModel)]="novoUsuario.permissao" name="permition" #permition="ngModel" required>
             <option value="administrador">Administrador</option>
             <option value="basico">Usuário básico</option>
           </select>
+          <div *ngIf="permition.invalid && (permition.dirty || permition.touched)" class="alert alert-danger">
+              Escolha um nivel de acesso.
+        </div>
         </div>
       </div>
     </div>
   </form>
   <div class="row justify-content-md-center">
-    <button class="btn btn-primary" *ngIf="!editando" (click)="adicionarUsuario()" [disabled]="f.valid">Salvar</button>
+    <button class="btn btn-primary" *ngIf="!editando" (click)="adicionarUsuario()" [disabled]="!f.valid">Salvar</button>
     <button class="btn btn-primary" *ngIf="editando" (click)="editarUsuario()">Salvar</button>
   </div>
 </div>

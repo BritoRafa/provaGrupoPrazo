@@ -3,6 +3,7 @@ import { Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { Usuario } from './../model/usuario';
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms'
 
 @Component({
   selector: 'app-novos-usuarios-modal',
@@ -12,6 +13,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NovosUsuariosModalComponent implements OnInit {
   novoUsuario = new Usuario();
   editando: boolean;
+  form: FormGroup;
   public onClose: Subject<boolean>;
 
   constructor(public modalRef: BsModalRef,
