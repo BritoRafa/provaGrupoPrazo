@@ -11,14 +11,14 @@ namespace ProvaGrupoPrazo_BackEnd.Controllers
     [Route("api/[controller]")]
     public class TarefasController : Controller
     {
-        // GET api/values
+        // GET
         [HttpGet]
         public List<Tarefa> CarregarTarefas()
         {
             return new TarefaRepository().CarregarTarefas();
         }
 
-        // POST api/values/5
+        // POST
         [HttpPost]
         public IActionResult AdicionarTarefa([FromBody]Tarefa tarefa)
         {
@@ -33,18 +33,34 @@ namespace ProvaGrupoPrazo_BackEnd.Controllers
             }
         }
 
-        // PUT api/values/5
+        // PUT 
         [HttpPut]
         public IActionResult EditarTarefa([FromBody]Tarefa tarefa)
         {
-            return Ok();
+            try
+            {
+                new TarefaRepository().EditarTarefa(tarefa);
+                return Ok();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        // DELETE api/values/5
+        // DELETE
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult ExcluirTarefa(int id)
         {
-            return Ok();
+            try
+            {
+                new TarefaRepository().ExcluirTarefa(id);
+                return Ok();
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

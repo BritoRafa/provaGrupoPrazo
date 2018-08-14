@@ -16,17 +16,8 @@ export class NovosUsuariosComponent implements OnInit {
   constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
-    this.usuarios = [
-      {
-        id: 1,
-        nome: 'admin',
-        email: 'admin',
-        permissao: 'administrador',
-        senha: 'admin',
-      }
-    ]
   }
-  abrirModal() {
+  adicionarUsuario() {
     this.modalRef = this.modalService.show(NovosUsuariosModalComponent);
   }
   editarUsuario(usuario: Usuario) {

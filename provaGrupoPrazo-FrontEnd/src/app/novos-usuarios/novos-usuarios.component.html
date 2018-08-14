@@ -14,12 +14,17 @@
         <td>{{usuario.email}}</td>
         <td>{{usuario.permissao}}</td>
         <td>
-          <button type="button" class="btn btn-primary btn-small" (click)="editarUsuario(usuario)">
-            <i class="fas fa-edit"></i>
-          </button>
+          <div class="btn-group btn-group-sm" role="group">
+            <button type="button" class="btn btn-primary btn-small" (click)="editarUsuario(usuario)">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-small" (click)="excluirUsuario(usuario.id)">
+              <i class="fas fa-edit"></i>
+            </button>
+          </div>
         </td>
       </tr>
-      <button type="button" class="btn btn-primary btn-small" (click)="abrirModal()">
+      <button type="button" class="btn btn-primary btn-small" (click)="adicionarUsuario()">
         <i class="fas fa-plus-square"></i>
         <span> Adicionar novo usuário</span>
       </button>

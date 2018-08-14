@@ -16,4 +16,10 @@ export class TarefasService {
   public adicionarTarefa(tarefa: Tarefa) {
     return this.http.post(environment.webApiBaseUrl + 'api/Tarefas', tarefa);
   }
+  public editarTarefa(tarefa: Tarefa) {
+    return this.http.put(environment.webApiBaseUrl + 'api/Tarefas', tarefa);
+  }
+  public excluirTarefa(id: number) {
+    return this.http.delete(environment.webApiBaseUrl + 'api/Tarefas/' + id);
+  }
 }

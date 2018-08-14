@@ -25,21 +25,30 @@ export class TarefasComponent implements OnInit {
       this.tarefas = result as Tarefa[];
     });
   }
-  abrirModal() {
+  adicionarTarefa() {
     this.modalRef = this.modalService.show(NovasTarefasModalComponent);
+    this.modalRef.content.onClose.subscribe( result => {
+      this.carregarTarefas();
+    })
   }
   editarTarefa(tarefa: Tarefa) {
     this.modalRef = this.modalService.show(NovasTarefasModalComponent, {
       initialState: {
-        novaTarefa: tarefa
+        novaTarefa: tarefa,
+        editando: true
       }
     });
+    this.modalRef.content.onClose.subscribe( result => {
+      this.carregarTarefas();
+    });
   }
-  excluirTarefa(tarefa) {
+  excluirTarefa(id: number) {
     this.modalRef = this.modalService.show(ConfirmationModalComponent);
     this.modalRef.content.onClose.subscribe(result => {
       if (result === true) {
-          console.log('sim');
+          this.tarefasService.excluirTarefa(id).subscribe(result => {
+            this.carregarTarefas();
+          });
       }
   });
   }

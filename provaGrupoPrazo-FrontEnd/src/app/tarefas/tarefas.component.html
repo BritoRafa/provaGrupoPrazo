@@ -14,13 +14,13 @@
             <button type="button" class="btn btn-primary btn-small" (click)="editarTarefa(tarefa)">
               <i class="fas fa-edit"></i>
             </button>
-            <button type="button" class="btn btn-danger btn-small" (click)="excluirTarefa(tarefa)">
+            <button type="button" class="btn btn-danger btn-small" (click)="excluirTarefa(tarefa.id)">
               <i class="fas fa-edit"></i>
             </button>
           </div>
         </td>
       </tr>
-      <button type="button" class="btn btn-primary btn-small" (click)="abrirModal()">
+      <button type="button" class="btn btn-primary btn-small" (click)="adicionarTarefa()">
         <i class="fas fa-plus-square"></i>
         <span> Adicionar nova tarefa</span>
       </button>

@@ -31,20 +31,49 @@ namespace ProvaGrupoPrazo_BackEnd.Repository
                 return null;
             }
         }
-        public int AdicionarTarefa(Tarefa tarefa)
+        public void AdicionarTarefa(Tarefa tarefa)
         {
             try
             {
-                var queryString = @"INSERT INTO Tarefas (Id, Titulo) VALUES (@Id, @Titulo)";
+                var queryString = @"INSERT INTO Tarefas (Titulo) VALUES (@Titulo)";
                 using (var connection = conn.ConnectionString)
                 {
-                    connection.Open();
-                    return connection.Execute(queryString, tarefa);
+                    connection.Execute(queryString, tarefa);
                 }
             }
             catch (Exception e)
             {
-                return 0;
+                System.Console.WriteLine(e.Message);
+            }
+        }
+        public void EditarTarefa(Tarefa tarefa)
+        {
+            try
+            {
+                var queryString = @"UPDATE Tarefas SET Titulo = @Titulo WHERE Id = @Id";
+                using(var connection = conn.ConnectionString)
+                {
+                    connection.Execute(queryString, tarefa);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
+        }
+        public void ExcluirTarefa(int id)
+        {
+            try
+            {
+                var queryString = @"DELETE FROM Tarefas WHERE Id = @Id";
+                using(var connection = conn.ConnectionString)
+                {
+                    connection.Execute(queryString, new { Id = id });
+                }
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
             }
         }
     }
