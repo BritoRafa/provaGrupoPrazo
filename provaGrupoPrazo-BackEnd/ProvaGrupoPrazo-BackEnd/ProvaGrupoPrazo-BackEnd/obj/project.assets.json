@@ -13287,23 +13287,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rafael\\.nuget\\packages\\": {},
+    "C:\\Users\\rafaelpb\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\rafael\\provaGrupoPrazo\\provaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd.csproj",
+      "projectUniqueName": "D:\\Repositorio\\provaGrupoPrazo\\provaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd.csproj",
       "projectName": "ProvaGrupoPrazo-BackEnd",
-      "projectPath": "E:\\rafael\\provaGrupoPrazo\\provaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd.csproj",
-      "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-      "outputPath": "E:\\rafael\\provaGrupoPrazo\\provaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\obj\\",
+      "projectPath": "D:\\Repositorio\\provaGrupoPrazo\\provaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd.csproj",
+      "packagesPath": "C:\\Users\\rafaelpb\\.nuget\\packages\\",
+      "outputPath": "D:\\Repositorio\\provaGrupoPrazo\\provaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\ProvaGrupoPrazo-BackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafaelpb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13311,6 +13311,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://tcerjvm21:8080/tfs/DefaultCollection/_packaging/PacotesTCE/nuget/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -20,6 +20,7 @@ export class NovasTarefasModalComponent implements OnInit {
     this.onClose = new Subject();
   }
   adicionarTarefa() {
+    this.novaTarefa.concluida = false;
     this.tarefasService.adicionarTarefa(this.novaTarefa).subscribe( result => {
       this.onClose.next(true);
       this.modalRef.hide();

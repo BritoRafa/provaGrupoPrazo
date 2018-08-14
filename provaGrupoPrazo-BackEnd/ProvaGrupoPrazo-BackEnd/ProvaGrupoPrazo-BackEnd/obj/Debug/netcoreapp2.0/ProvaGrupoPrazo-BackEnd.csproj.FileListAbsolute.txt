@@ -9,3 +9,13 @@ E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaG
 E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.pdb
 E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.dll
 E:\rafael\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.pdb
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.deps.json
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.runtimeconfig.json
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.runtimeconfig.dev.json
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.dll
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\bin\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.pdb
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.csproj.CoreCompileInputs.cache
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.AssemblyInfoInputs.cache
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.AssemblyInfo.cs
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.dll
+D:\Repositorio\provaGrupoPrazo\provaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\ProvaGrupoPrazo-BackEnd\obj\Debug\netcoreapp2.0\ProvaGrupoPrazo-BackEnd.pdb

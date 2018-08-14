@@ -49,6 +49,20 @@ namespace ProvaGrupoPrazo_BackEnd.Controllers
             }
         }
 
+        [HttpPut("ConcluirTarefa")]
+        public IActionResult ConcluirTarefa([FromBody]Tarefa tarefa)
+        {
+            try
+            {
+                new TarefaRepository().ConcluirTarefa(tarefa);
+                return Ok();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         // DELETE
         [HttpDelete("{id}")]
         public IActionResult ExcluirTarefa(int id)

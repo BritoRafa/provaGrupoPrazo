@@ -3,12 +3,14 @@
     <thead>
       <tr>
         <th scope="col">Título</th>
+        <th scope="col">Concluída</th>
         <th scope="col">&nbsp;</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let tarefa of tarefas;">
+      <tr *ngFor="let tarefa of tarefas;" [ngClass]="{'tarefa-concluida': tarefa.concluida}">
         <td>{{tarefa.titulo}}</td>
+        <td><input type="checkbox"  (change)="marcarConcluida(tarefa)" [(ngModel)}="tarefa.concluida"></td>
         <td>
           <div class="btn-group btn-group-sm" role="group">
             <button type="button" class="btn btn-primary btn-small" (click)="editarTarefa(tarefa)">

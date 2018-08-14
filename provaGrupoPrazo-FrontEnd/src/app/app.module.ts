@@ -16,6 +16,7 @@ import { UsuarioService } from './services/usuario.service';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth-guard';
+import { APP_BASE_HREF, HashLocationStrategy, LocationStrategy } from '../../node_modules/@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { AuthGuard } from './guards/auth-guard';
     ModalModule.forRoot()
   ],
   providers: [
+    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     TarefasService,
     UsuarioService,
     AuthService,

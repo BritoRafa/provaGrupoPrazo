@@ -35,7 +35,7 @@ namespace ProvaGrupoPrazo_BackEnd.Repository
         {
             try
             {
-                var queryString = @"INSERT INTO Tarefas (Titulo) VALUES (@Titulo)";
+                var queryString = @"INSERT INTO Tarefas (Titulo, Concluida) VALUES (@Titulo, @Concluida)";
                 using (var connection = conn.ConnectionString)
                 {
                     connection.Execute(queryString, tarefa);
@@ -52,6 +52,21 @@ namespace ProvaGrupoPrazo_BackEnd.Repository
             {
                 var queryString = @"UPDATE Tarefas SET Titulo = @Titulo WHERE Id = @Id";
                 using(var connection = conn.ConnectionString)
+                {
+                    connection.Execute(queryString, tarefa);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
+        }
+        public void ConcluirTarefa(Tarefa tarefa)
+        {
+            try
+            {
+                var queryString = @"UPDATE Tarefas SET Concluida = @Concluida WHERE Id = @Id";
+                using (var connection = conn.ConnectionString)
                 {
                     connection.Execute(queryString, tarefa);
                 }
