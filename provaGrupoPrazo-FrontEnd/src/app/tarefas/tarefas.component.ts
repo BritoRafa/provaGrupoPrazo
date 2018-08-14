@@ -53,7 +53,9 @@ export class TarefasComponent implements OnInit {
   });
   }
   marcarConcluida(tarefa: Tarefa) {
-    this.tarefasService.editarTarefa(tarefa).subscribe();
+    this.tarefasService.editarTarefa(tarefa).subscribe(result => {
+      this.carregarTarefas();
+    });
   }
 
 }
