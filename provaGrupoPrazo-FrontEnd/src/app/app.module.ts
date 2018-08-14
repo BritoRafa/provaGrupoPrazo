@@ -12,6 +12,7 @@ import { NovosUsuariosModalComponent } from './novos-usuarios-modal/novos-usuari
 import { NovasTarefasModalComponent } from './novas-tarefas-modal/novas-tarefas-modal.component';
 import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
 import { TarefasService } from './services/tarefas.service';
+import { UsuarioService } from './services/usuario.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TarefasService } from './services/tarefas.service';
     ModalModule.forRoot()
   ],
   providers: [
-    TarefasService
+    TarefasService,
+    UsuarioService
   ],
   bootstrap: [AppComponent],
   entryComponents: [

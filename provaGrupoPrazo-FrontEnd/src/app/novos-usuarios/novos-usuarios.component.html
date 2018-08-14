@@ -12,7 +12,8 @@
       <tr *ngFor="let usuario of usuarios;">
         <td>{{usuario.nome}}</td>
         <td>{{usuario.email}}</td>
-        <td>{{usuario.permissao}}</td>
+        <td *ngIf="usuario.permissao === 'administrador'">Administrador</td>
+        <td *ngIf="usuario.permissao === 'basico'">Usuário básico</td>
         <td>
           <div class="btn-group btn-group-sm" role="group">
             <button type="button" class="btn btn-primary btn-small" (click)="editarUsuario(usuario)">

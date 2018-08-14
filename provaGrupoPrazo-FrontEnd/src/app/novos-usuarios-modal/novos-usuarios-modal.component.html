@@ -5,39 +5,56 @@
   </button>
 </div>
 <div class="modal-body">
-  <div class="row">
-    <div class="col-6">
-      <div class="form-group">
-        <label for="name-input">Nome:</label>
-        <input name="name-input" type="text" class="form-control" [(ngModel)]="novoUsuario.nome">
+  <form #f="ngModel">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="name-input">Nome:</label>
+          <input name="name-input" type="text" class="form-control" [(ngModel)]="novoUsuario.nome" required #name="ngModel">
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+            Digite um nome
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="email-input">E-mail:</label>
+          <input name="email-input" type="email" class="form-control" [(ngModel)]="novoUsuario.email" required #email='ngModel'>
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+            E-mail inválido
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="col-6">
-      <div class="form-group">
-        <label for="name-input">E-mail:</label>
-        <input name="name-input" type="text" class="form-control" [(ngModel)]="novoUsuario.email">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="password-input">Senha:</label>
+          <input name="password-input" type="password" [(ngModel)]="novoUsuario.senha" class="form-control" required minlength="6"
+            #password="ngModel">
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+            <div *ngIf="password.errors.required">
+              Digite uma senha.
+            </div>
+            <div *ngIf="password.errors.minlength">
+              Senhas tem que ter no minimo 6 caracteres
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="name-input">Permissão:</label>
+          <select class="form-control" [(ngModel)]="novoUsuario.permissao">
+            <option value="administrador">Administrador</option>
+            <option value="basico">Usuário básico</option>
+          </select>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <div class="form-group">
-        <label for="name-input">Senha:</label>
-        <input name="name-input" type="password" [(ngModel)]="novoUsuario.senha" class="form-control">
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="form-group">
-        <label for="name-input">Permissão:</label>
-        <select class="form-control" [(ngModel)]="novoUsuario.permissao">
-          <option value="administrador">Administrador</option>
-          <option value="usuario-basico">Usuário básico</option>
-        </select>
-      </div>
-    </div>
-  </div>
+  </form>
   <div class="row justify-content-md-center">
-    <button class="btn btn-primary" (click)="adicionarUsuario()">Salvar</button>
+    <button class="btn btn-primary" *ngIf="!editando" (click)="adicionarUsuario()" [disabled]="f.valid">Salvar</button>
+    <button class="btn btn-primary" *ngIf="editando" (click)="editarUsuario()">Salvar</button>
   </div>
 </div>
